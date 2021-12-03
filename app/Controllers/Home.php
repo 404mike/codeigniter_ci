@@ -27,7 +27,7 @@ class Home extends BaseController
      */
     public function checkUserPermission($name)
     {
-        if($name == "Boris") {
+        if ($name == "Boris") {
             return "Go away";
         }
 
@@ -36,7 +36,7 @@ class Home extends BaseController
 
     /**
      * Check if applicant can have mortgage
-     * @param array
+     * @param array $userDetails
      * @return array
      */
     public function canHaveMortgage(array $userDetails)
@@ -46,7 +46,7 @@ class Home extends BaseController
         $creditRating = $userDetails['creditRating'];
 
         // check applicant age
-        if($age < 21 || $age > 99) {
+        if ($age < 21 || $age > 99) {
             return [
                 'approved' => false,
                 'message' => 'too young'
@@ -54,7 +54,7 @@ class Home extends BaseController
         }
 
         // check applicant income
-        if($income < 21000) {
+        if ($income < 21000) {
             return [
                 'approved' => false,
                 'message' => 'income too low'
@@ -62,7 +62,7 @@ class Home extends BaseController
         }
 
         // check applicant credit rating
-        if($creditRating < 10) {
+        if ($creditRating < 10) {
             return [
                 'approved' => false,
                 'message' => 'bad credit rating'

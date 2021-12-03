@@ -1,0 +1,8 @@
+includes:
+	- phpstan.neon.dist
+
+parameters:
+	ignoreErrors:
+		- '#Function pcntl_open not found\.#'
+	parallel:
+		maximumNumberOfProcesses: 1

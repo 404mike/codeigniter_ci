@@ -19,3 +19,9 @@ jobs:
 
       - name: PHPUnit Tests
         run: ./vendor/bin/phpunit tests/*
+
+      - name: PHP_CodeSniffer - PSR12
+        run: vendor/bin/phpcs --standard=PSR12 app/Controllers/
+
+      - name: PHPStan level 5
+        run: vendor/bin/phpstan analyse -l 5 app/Controllers/

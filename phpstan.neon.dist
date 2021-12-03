@@ -13,7 +13,6 @@ parameters:
 	level: 5
 	paths:
 		- app
-		- system
 		- utils/PHPStan
 	treatPhpDocTypesAsCertain: false
 	bootstrapFiles:
@@ -28,6 +27,8 @@ parameters:
 		- system/Test/Filters/CITestStreamFilter.php
 		- system/ThirdParty/*
 		- system/Validation/Views/single.php
+		- system/*
+		- app/Controllers/BaseController.php
 	ignoreErrors:
 		- '#Access to an undefined property CodeIgniter\\Database\\BaseConnection::\$mysqli|\$schema#'
 		- '#Access to an undefined property CodeIgniter\\Database\\ConnectionInterface::(\$DBDriver|\$connID|\$likeEscapeStr|\$likeEscapeChar|\$escapeChar|\$protectIdentifiers|\$schema)#'

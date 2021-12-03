@@ -2,6 +2,8 @@ includes:
 	- phpstan.neon.dist
 
 parameters:
+	excludePaths:
+		- app/Controllers/BaseController.php
 	ignoreErrors:
 		- '#Function pcntl_open not found\.#'
 	parallel:
